@@ -1,9 +1,9 @@
 EAPI=2
-inherit git gnome2
+inherit gnome2
 
 DESCRIPTION="Gnome applet for displaying Xmonad log."
 HOMEPAGE="http://uhsure.com/xmonad-log-applet.html"
-SRC_URI="http://git.uhsure.com/xmonad-log-applet.git"
+SRC_URI="http://uhsure.com/xmonad-log-applet/${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
