@@ -5,11 +5,12 @@
 CABAL_FEATURES="haddock lib"
 inherit base haskell-cabal autotools
 
-MY_P="DBus-${PV}"
+MY_PN="DBus"
+MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Haskell bindings for D-Bus"
 HOMEPAGE="http://hackage.haskell.org/package/DBus"
-SRC_URI="http://hackage.haskell.org/packages/archive/DBus/0.4/DBus-${PV}.tar.gz"
+SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
