@@ -25,3 +25,7 @@ src_unpack() {
     git_src_unpack
     cd "${S}"
 }
+
+src_prepare() {
+    gnome2_src_prepare
+}
