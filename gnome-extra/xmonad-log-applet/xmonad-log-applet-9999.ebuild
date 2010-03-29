@@ -19,6 +19,8 @@ RDEPEND=">=sys-apps/dbus-1.2
 	 >=x11-libs/gtk+-2.10"
 DEPEND="${RDEPEND}"
 
+S="${WORKDIR}/${MY_P}"
+
 src_unpack() {
     git_src_unpack
     cd "${S}"
