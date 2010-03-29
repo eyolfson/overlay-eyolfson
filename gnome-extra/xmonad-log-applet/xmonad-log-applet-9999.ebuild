@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/dbus-1.2
-         >=dev-haksell/hdbus-0.4
+         dev-haksell/hdbus
          >=gnome-base/gnome-panel-2
 	 >=dev-libs/glib-2.16
 	 >=x11-libs/gtk+-2.10"
