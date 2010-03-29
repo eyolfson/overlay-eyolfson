@@ -25,8 +25,6 @@ DEPEND=">=dev-lang/ghc-6.4
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	cd ${S}
-	./configure
 	eautoreconf
 	haskell-cabal_src_compile
 }
