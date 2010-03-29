@@ -1,1 +1,6 @@
-gnome-extra
+app-emacs 
+dev-lang 
+dev-lisp 
+dev-perl 
+gnome-extra 
+x11-misc
