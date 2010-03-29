@@ -19,6 +19,7 @@ DEPEND=">=dev-lang/ghc-6.4
 		>=sys-apps/dbus-0.60"
 
 src_compile() {
+	econf
 	eautoreconf
 	haskell-cabal_src_compile
 }
