@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/ghc-6.6.1"
+RDEPEND=">=dev-lang/ghc-6.6.1
+	>=sys-apps/dbus-0.60"
 DEPEND=">=dev-haskell/cabal-1.6
 	>=sys-apps/sed-4
 	${RDEPEND}"
@@ -27,7 +28,10 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's:defaultMain:defaultMainWithHooks autoconfUserHooks:' Setup.hs
-	sed -i 's:PatternSignatures:ScopedTypeVariables:' DBus/Message.hsc
-	sed -i 's:Control.Exception:Control.OldException:' DBus/Internal.hsc
+	sed -i 's:defaultMain:defaultMainWithHooks autoconfUserHooks:' Setup.hs \
+		|| die 'Sed failed.'
+	sed -i 's:PatternSignatures:ScopedTypeVariables:' DBus/Message.hsc \
+		|| die 'Sed failed.'
+	sed -i 's:Control.Exception:Control.OldException:' DBus/Internal.hsc \
+		|| die 'Sed failed.'
 }
