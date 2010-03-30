@@ -28,10 +28,10 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's:defaultMain:defaultMainWithHooks autoconfUserHooks:' Setup.hs \
-		|| die 'Sed failed.'
-	sed -i 's:PatternSignatures:ScopedTypeVariables:' DBus/Message.hsc \
-		|| die 'Sed failed.'
-	sed -i 's:Control.Exception:Control.OldException:' DBus/Internal.hsc \
-		|| die 'Sed failed.'
+	sed -i -e 's/"defaultMain"/"defaultMainWithHooks autoconfUserHook"/' \
+		Setup.hs || die "Sed failed!"
+	sed -i -e 's/"PatternSignatures"/"ScopedTypeVariables"/' \
+		DBus/Message.hsc || die "Sed failed!"
+	sed -i -e 's/"Control.Exception"/"Control.OldException"/' \
+		DBus/Internal.hsc || die "Sed failed!"
 }
