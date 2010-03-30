@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header:  $
 
-CABAL_FEATURES="haddock lib"
-inherit base haskell-cabal autotools
+CABAL_FEATURES="lib profile haddock hscolour"
+inherit haskell-cabal
 
 MY_PN="DBus"
 MY_P="${MY_PN}-${PV}"
@@ -14,17 +14,19 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.
 
 LICENSE="BSD"
 SLOT="0"
-
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/ghc-6.4
-		>=sys-apps/dbus-0.60"
-
+RDEPEND=">=dev-lang/ghc-6.6.1"
+DEPEND=">=dev-haskell/cabal-1.6
+	>=sys-apps/sed-4
+	${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-src_compile() {
-	eautoreconf
-	haskell-cabal_src_compile
+src_unpack() {
+	cd ${S}
+	sed -i 's:defaultMain:defaultMainWithHooks autoconfUserHooks:' Setup.hs
+	sed -i 's:PatternSignatures:ScopedTypeVariables:' DBus/Message.hsc
+	sed -i 's:Control.Exception:Control.OldException:' DBus/Internal.hsc
 }
