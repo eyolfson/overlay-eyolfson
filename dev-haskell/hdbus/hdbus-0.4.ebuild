@@ -25,6 +25,7 @@ DEPEND=">=dev-haskell/cabal-1.6
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
+	unpack ${A}
 	cd ${S}
 	sed -i 's:defaultMain:defaultMainWithHooks autoconfUserHooks:' Setup.hs
 	sed -i 's:PatternSignatures:ScopedTypeVariables:' DBus/Message.hsc
