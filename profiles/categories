@@ -3,5 +3,6 @@ dev-haskell
 dev-lang 
 dev-lisp 
 dev-perl 
+gnome-base 
 gnome-extra 
 x11-misc
