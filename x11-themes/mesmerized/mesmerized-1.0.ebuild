@@ -19,7 +19,7 @@ RDEPEND=">=x11-themes/gtk-engines-aurora-1.5.1
 
 src_install() {
 	cd "${WORKDIR}"
-	for dir in Mermerize* ; do
+	for dir in Mesmerize* ; do
 		insinto /usr/share/themes/"${dir}"
 		doins -r "${dir}"/*
 	done
