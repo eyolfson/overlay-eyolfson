@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-S=${WORKDIR}/${P/-xcursors}
+S=${WORKDIR}/${PN/-xcursors}
 
 src_install() {
 	insinto /usr/share/cursors/xorg-x11/${MY_PN}
