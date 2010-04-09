@@ -18,7 +18,8 @@ RDEPEND=">=x11-themes/gtk-engines-aurora-1.5.1
 	>=x11-themes/gnome-colors-common-5.5.1"
 
 src_install() {
-	for dir in ${WORKDIR} ; do
+	cd "${WORKDIR}"
+	for dir in Mermerize* ; do
 		insinto /usr/share/themes/"${dir}"
 		doins -r "${dir}"/*
 	done
