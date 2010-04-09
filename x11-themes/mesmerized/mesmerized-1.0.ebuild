@@ -15,7 +15,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=">=x11-themes/gtk-engines-aurora-1.5.1
 	>=x11-themes/bluecurve-xcursors-0.1.1
-	>=x11-themes/gnome-colors-common-5.5.1"
+	>=x11-themes/gnome-colors-themes-5.5.1"
 
 src_install() {
 	cd "${WORKDIR}"
