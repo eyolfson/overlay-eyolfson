@@ -16,16 +16,20 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/dbus-1.2
-         >=dev-haskell/hdbus-0.4
-         >=gnome-base/gnome-panel-2
+		 >=dev-haskell/hdbus-0.4
+		 >=gnome-base/gnome-panel-2
 	 >=dev-libs/glib-2.16
 	 >=x11-libs/gtk+-2.10"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
-    git_src_unpack
+	git_src_unpack
 }
 
 src_prepare() {
-    gnome2_src_prepare
+	gnome2_src_prepare
+}
+
+src_install() {
+	einstall || die "einstall failed"
 }
