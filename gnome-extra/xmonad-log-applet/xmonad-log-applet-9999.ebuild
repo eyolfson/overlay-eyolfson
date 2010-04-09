@@ -11,7 +11,6 @@ SRC_URI=""
 EGIT_BRANCH="master"
 EGIT_REPO_URI="http://git.uhsure.com/xmonad-log-applet.git"
 
-
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -23,11 +22,8 @@ RDEPEND=">=sys-apps/dbus-1.2
 	 >=x11-libs/gtk+-2.10"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_P}"
-
 src_unpack() {
     git_src_unpack
-    cd "${S}"
 }
 
 src_prepare() {
