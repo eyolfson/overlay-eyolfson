@@ -3,9 +3,9 @@
 # $Header: $
 
 EAPI=2
-inherit git gnome2
+inherit eutils git gnome2
 
-DESCRIPTION="Gnome applet for displaying Xmonad log."
+DESCRIPTION="Gnome applet for displaying XMonad log"
 HOMEPAGE="http://uhsure.com/xmonad-log-applet.html"
 SRC_URI=""
 EGIT_BRANCH="master"
@@ -16,10 +16,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/dbus-1.2
-		 >=dev-haskell/hdbus-0.4
-		 >=gnome-base/gnome-panel-2
-	 >=dev-libs/glib-2.16
-	 >=x11-libs/gtk+-2.10"
+	>=dev-haskell/hdbus-0.4
+	>=gnome-base/gnome-panel-2
+	>=dev-libs/glib-2.16
+	>=x11-libs/gtk+-2.10"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
@@ -28,6 +28,9 @@ src_unpack() {
 
 src_prepare() {
 	gnome2_src_prepare
+
+	# Fixed the skeleton Makefile, eyolfson
+	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
 src_install() {

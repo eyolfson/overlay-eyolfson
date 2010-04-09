@@ -1,0 +1,29 @@
+From e3b2767e455c04e9c482ef6c0ee0063142acbaad Mon Sep 17 00:00:00 2001
+From: Jon Eyolfson <jon@eyolfson.com>
+Date: Fri, 9 Apr 2010 19:47:20 -0400
+Subject: [PATCH] Fixed the skeleton Makefile.
+
+---
+ Makefile.in |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile.in b/Makefile.in
+index dffffc4..d6ebb50 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -13,9 +13,9 @@ serverdir = $(libdir)/bonobo/servers
+ all: xmonad-log-applet xmonad-log-applet.server
+ 
+ install:
+-	$(INSTALL_SH) -m 0755 xmonad-log-applet ${libdir}/gnome-applets
+-	$(INSTALL_SH) -m 0644 xmonad-log-applet.server $(serverdir)
+-	$(INSTALL_SH) -m 0644 xmonad48.png $(datarootdir)/icons/hicolor/48x48/apps
++	$(INSTALL_SH) -D -m 0755 xmonad-log-applet ${libdir}/gnome-applets
++	$(INSTALL_SH) -D -m 0644 xmonad-log-applet.server $(serverdir)
++	$(INSTALL_SH) -D -m 0644 xmonad48.png $(datarootdir)/icons/hicolor/48x48/apps
+ 
+ xmonad-log-applet: main.c
+ 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ main.c
+-- 
+1.7.0.3
+
