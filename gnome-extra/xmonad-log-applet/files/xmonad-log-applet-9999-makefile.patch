@@ -1,6 +1,6 @@
-From 0b2583641dfc41be293179460e67d756f08c2154 Mon Sep 17 00:00:00 2001
+From 88af12264946fd2d193c9bbdafcfdf397e2c1269 Mon Sep 17 00:00:00 2001
 From: Jon Eyolfson <jon@eyolfson.com>
-Date: Fri, 9 Apr 2010 20:04:59 -0400
+Date: Fri, 9 Apr 2010 20:15:19 -0400
 Subject: [PATCH] Fixed the skeleton Makefile.
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH] Fixed the skeleton Makefile.
  1 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/Makefile.in b/Makefile.in
-index dffffc4..722c72d 100644
+index dffffc4..2f2f9fe 100644
 --- a/Makefile.in
 +++ b/Makefile.in
 @@ -13,9 +13,9 @@ serverdir = $(libdir)/bonobo/servers
@@ -18,9 +18,9 @@ index dffffc4..722c72d 100644
 -	$(INSTALL_SH) -m 0755 xmonad-log-applet ${libdir}/gnome-applets
 -	$(INSTALL_SH) -m 0644 xmonad-log-applet.server $(serverdir)
 -	$(INSTALL_SH) -m 0644 xmonad48.png $(datarootdir)/icons/hicolor/48x48/apps
-+	$(INSTALL_SH) -d -m 0755 xmonad-log-applet ${libdir}/gnome-applets
-+	$(INSTALL_SH) -d -m 0644 xmonad-log-applet.server $(serverdir)
-+	$(INSTALL_SH) -d -m 0644 xmonad48.png $(datarootdir)/icons/hicolor/48x48/apps
++	$(INSTALL_SH) -m 0755 -t ${libdir}/gnome-applets xmonad-log-applet
++	$(INSTALL_SH) -m 0644 -t $(serverdir) xmonad-log-applet.server
++	$(INSTALL_SH) -m 0644 -t $(datarootdir)/icons/hicolor/48x48/apps xmonad48.png
  
  xmonad-log-applet: main.c
  	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ main.c
