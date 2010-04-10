@@ -1,6 +1,6 @@
-From e3b2767e455c04e9c482ef6c0ee0063142acbaad Mon Sep 17 00:00:00 2001
+From 0b2583641dfc41be293179460e67d756f08c2154 Mon Sep 17 00:00:00 2001
 From: Jon Eyolfson <jon@eyolfson.com>
-Date: Fri, 9 Apr 2010 19:47:20 -0400
+Date: Fri, 9 Apr 2010 20:04:59 -0400
 Subject: [PATCH] Fixed the skeleton Makefile.
 
 ---
@@ -8,10 +8,10 @@ Subject: [PATCH] Fixed the skeleton Makefile.
  1 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/Makefile.in b/Makefile.in
-index dffffc4..d6ebb50 100644
+index dffffc4..722c72d 100644
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -13,10 +13,9 @@ serverdir = $(libdir)/bonobo/servers
+@@ -13,9 +13,9 @@ serverdir = $(libdir)/bonobo/servers
  all: xmonad-log-applet xmonad-log-applet.server
  
  install:
@@ -26,3 +26,4 @@ index dffffc4..d6ebb50 100644
  	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ main.c
 -- 
 1.7.0.3
+
