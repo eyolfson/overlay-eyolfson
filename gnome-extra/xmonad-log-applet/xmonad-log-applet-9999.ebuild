@@ -29,7 +29,7 @@ src_unpack() {
 src_prepare() {
 	gnome2_src_prepare
 
-	# Fixed the skeleton Makefile, eyolfson
+	# Quick fix for Makefile without DESTDIR, eyolfson
 	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
