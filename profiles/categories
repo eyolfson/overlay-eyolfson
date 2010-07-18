@@ -7,6 +7,6 @@ dev-python
 gnome-base 
 gnome-extra 
 net-misc 
+x11-libs 
 x11-misc 
 x11-themes
-virtual
