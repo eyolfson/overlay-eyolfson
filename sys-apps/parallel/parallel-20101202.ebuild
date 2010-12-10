@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-# src_install() {
-# 	emake DESTDIR="${D}" install || die "make install failed"
-# 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
-# }
+src_install() {
+	emake DESTDIR="${D}" install || die "make install failed"
+}
