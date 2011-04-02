@@ -9,6 +9,8 @@ dev-scheme
 gnome-base 
 gnome-extra 
 net-misc 
+sys-boot 
+sys-power 
 x11-libs 
 x11-misc 
 x11-themes
