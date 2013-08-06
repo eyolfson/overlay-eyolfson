@@ -18,6 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+        dev-python/sexpdata[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/epc-${MY_PV}
