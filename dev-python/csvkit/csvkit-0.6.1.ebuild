@@ -18,6 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+        >=dev-python/dbf-0.94.003"
 
 S=${WORKDIR}/${PN}-${MY_PV}
