@@ -13,7 +13,7 @@ DESCRIPTION="csvkit is a suite of utilities for converting to and working with C
 HOMEPAGE="http://csvkit.readthedocs.org/en/0.6.1/"
 SRC_URI="https://pypi.python.org/packages/source/c/csvkit/csvkit-0.6.1.tar.gz"
 
-LICENSE=""
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
@@ -27,6 +27,10 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
         >=dev-python/coverage-3.5.2
         >=dev-python/tox-1.3
         >=dev-python/sqlalchemy-0.6.6
-        >=dev-python/argparse-1.2.1"
+"
 
 S=${WORKDIR}/${PN}-${MY_PV}
+
+src_prepare () {
+    sed -e '/argparse/d' -i setup.py
+}
