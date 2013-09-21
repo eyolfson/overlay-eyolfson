@@ -26,6 +26,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
         >=dev-python/sphinx-1.0.7
         >=dev-python/coverage-3.5.2
         >=dev-python/tox-1.3
-        >=dev-python/sqlalchemy-0.6.6"
+        >=dev-python/sqlalchemy-0.6.6
+        >=dev-python/argparse-1.2.1"
 
 S=${WORKDIR}/${PN}-${MY_PV}
