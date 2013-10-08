@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils git
+inherit eutils git-2
 
 DESCRIPTION="Jeroen janssens data-science-toolbox"
 HOMEPAGE="https://github.com/jeroenjanssens/data-science-toolbox"
